@@ -42,7 +42,7 @@ const team = [
      const membro = team[i];
     divElement = document.createElement("div")
     selectorTeam.append(divElement)
-    divElement.innerHTML = `${membro.name} + " " + ${membro.role} + " " + <img src="./assets/img/${membro.image}" alt=""></img>`
+    divElement.innerHTML = `${membro.name} ${membro.role}  <img src="./assets/img/${membro.image}" alt=""></img>`
      
     //   console.log(typeof membro)
     // nome dei membri
@@ -52,7 +52,6 @@ const team = [
     // stringa immagine
     console.log(membro.image)
     console.log("_________________")
-   
   }
 
   

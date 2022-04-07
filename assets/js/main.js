@@ -32,18 +32,24 @@ const team = [
   ];
 
 
-  console.log(team)
+   // faccio una variabile dove seleziono la dom dove voglio inserire le stringhe
+   const selectorTeam = document.getElementById("team")
+   
+   console.log(selectorTeam)
+   
 
   for (let i = 0; i<team.length; i++){
-      const membro = team[i];
+     const membro = team[i];
+     
     //   console.log(typeof membro)
     // nome dei membri
     console.log(membro.name)
     // ruolo
     console.log(membro.role)
-    //stringa immagine
+    // stringa immagine
     console.log(membro.image)
-    
+    console.log("_________________")
+   
   }
 
-  // faccio una variabile dove seleziono 
+  

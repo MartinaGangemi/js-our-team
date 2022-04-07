@@ -40,6 +40,9 @@ const team = [
 
   for (let i = 0; i<team.length; i++){
      const membro = team[i];
+    divElement = document.createElement("div")
+    selectorTeam.append(divElement)
+    divElement.innerHTML = membro.name + " " + membro.role + " " + membro.image
      
     //   console.log(typeof membro)
     // nome dei membri

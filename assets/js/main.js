@@ -37,14 +37,14 @@ const team = [
    
    console.log(selectorTeam)
    
-
+   let cardDisponibili
   for (let i = 0; i<team.length; i++){
      const membro = team[i];
     divElement = document.createElement("div")
     selectorTeam.append(divElement)
     divElement.classList.add("col","d-flex" ,"justify-content-center")
     
-    divElement.innerHTML =  `<div class="card text-center" style="width: 18rem;">
+    let cardDisponibili = divElement.innerHTML =  `<div class="card text-center" style="width: 18rem;">
     <img src="./assets/img/${membro.image}" class="card-img-top" alt="...">
     <div class="card-body">
       <p class="card-text"> <b>${membro.name} </b><br> ${membro.role}</p>
@@ -62,4 +62,28 @@ const team = [
     console.log("_________________")
   }
 
+  //seleziono il bottone
+
+  const btn = document.getElementById("add")
+
+  // creo la funzione al click
+  btn.addEventListener ("click", addCard)
+
+  function addCard (){
+      const yourName = document.getElementById("name").value
+      const yourRole = document.getElementById("role").value
+      const yourImage = document.getElementById("image").value
+     
+     
+        divElement = document.createElement("div")
+        selectorTeam.append(divElement)
+        divElement.classList.add("col","d-flex" ,"justify-content-center")
+      divElement.innerHTML = (` <div class="card text-center" style="width: 18rem;">
+      <img src="./assets/img/${yourImage}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text"> <b>${yourName} </b><br> ${yourRole}</p>
+      </div>
+    </div>`)
+   
+  }
   

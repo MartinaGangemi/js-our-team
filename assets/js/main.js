@@ -42,8 +42,16 @@ const team = [
      const membro = team[i];
     divElement = document.createElement("div")
     selectorTeam.append(divElement)
-    divElement.innerHTML = `${membro.name} ${membro.role}  <img src="./assets/img/${membro.image}" alt=""></img>`
-     
+    divElement.classList.add("col","d-flex" ,"justify-content-center")
+    
+    divElement.innerHTML =  `<div class="card text-center" style="width: 18rem;">
+    <img src="./assets/img/${membro.image}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text"> <b>${membro.name} </b><br> ${membro.role}</p>
+    </div>
+  </div>`
+
+ 
     //   console.log(typeof membro)
     // nome dei membri
     console.log(membro.name)
